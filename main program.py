@@ -1,7 +1,6 @@
 # testing push
 
-def encode_password():
-    pass
+print("hello world")
 
 if __name__ == '__main__':
     pass
