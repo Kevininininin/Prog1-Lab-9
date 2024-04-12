@@ -1,4 +1,7 @@
 # Team members: Jinghan Wu, Cesar Carbaloo
+
+# Encode_password function encodes a string of numbers and returns the encoded string
+# The encoding mechnism works by adding 3 to each digit
 def encode_password(code):
     encoded_password = ""
     for char in code:
@@ -13,6 +16,8 @@ def encode_password(code):
     # print(encoded_password)
     return encoded_password
 
+
+# The main function loops the menu until user input 3. Quit
 def main():
     while True:
         print("Menu"
@@ -31,8 +36,8 @@ def main():
             pass
         elif option == "3":
             break
-
-
+        else:
+            print("Invalid input!")
 
 
 if __name__ == '__main__':
