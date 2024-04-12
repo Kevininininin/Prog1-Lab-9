@@ -13,6 +13,21 @@ def encode_password(code):
     # print(encoded_password)
     return encoded_password
 
+def decode_password(password):
+    decoded_password = ""
+    for char in password:
+        if char == "0":
+            decoded_password += "7"
+        if char == "1":
+            decoded_password += "8"
+        if char == "2":
+            decoded_password += "9"
+        if (char != "2") and (char != "1") and (char != "0"):
+            char = int(char)
+            char -= 3
+            decoded_password += str(char)
+    return decoded_password
+
 def main():
     while True:
         print("Menu"
@@ -25,9 +40,12 @@ def main():
 
         if option == "1":
             code = input("Please enter your password to encode: ")
-            encode_password(code)
+            password = encode_password(code)
             print("Your password has been encoded and stored!\n")
         elif option == "2":
+            decode = decode_password(password)
+            print("The encoded password is " + password + ", and the original password is " + decode + ".")
+            print(" ")
             pass
         elif option == "3":
             break
